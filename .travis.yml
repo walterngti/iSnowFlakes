@@ -1,6 +1,5 @@
 language: objective-c
 os: osx
 osx_image: xcode9.1
-xcode_project: SnowflakesMaker.xcodeproj
-xcode_scheme: SnowflakesMaker
+script: xcodebuild -sdk iphonesimulator11.1 -project SnowflakesMaker.xcodeproj -scheme SnowflakesMaker CODE_SIGNING_REQUIRED=NO clean build test
 

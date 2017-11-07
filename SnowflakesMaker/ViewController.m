@@ -84,9 +84,10 @@ NSInteger const kMaxPhases = 3;
 
 - (UIImage *)createSnowflake {
     // creating image for the quarter size of the image view
+    CGFloat scale = UIScreen.mainScreen.scale;
     CGSize size = self.imgView.frame.size;
-    size.width = roundf(size.width / 4);
-    size.height = roundf(size.height / 4);
+    size.width = scale * roundf(size.width / 4);
+    size.height = scale * roundf(size.height / 4);
     CGRect rect = CGRectMake(0.0f, 0.0f, floorf(size.width / 2), floorf(size.height / 2));
 
     CGImageRef branchRef = [self randomizeOneSnowflakeBranchInRect:rect];

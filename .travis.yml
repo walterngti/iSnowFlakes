@@ -1,4 +1,5 @@
 language: objective-c
+os: osx
 xcode_project: SnowflakesMaker.xcodeproj
 xcode_scheme: SnowflakesMaker
 
